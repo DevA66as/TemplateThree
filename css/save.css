@@ -1,0 +1,62 @@
+.mega-menu{
+    position: absolute;
+    right: 41.5px;
+    z-index: 10;
+    width: calc(100% - 82px);
+    background-color: white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    height: 58%;
+    border-bottom: 4px solid var(--sec-alt-color);
+}
+.mega-menu > img{
+    width: 500px;
+    height: 100%;
+}
+@media (max-width: 991px) {
+    .mega-menu > img {
+    width: 400px;
+    
+    }
+}
+.mega-menu .links {
+ flex: 1;
+ height: 100%;
+}
+.mega-menu .links li:not(:last-child) {
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid #e9e6e6;
+    padding-top: 15px;
+    transition: var(--main-animation);
+    height: 60px;
+}
+.mega-menu .links li:last-child {
+    display: flex;
+    gap: 20px;
+    padding-top: 15px;
+}
+.mega-menu .links li:hover {
+    background-color: var(--section-background);
+}
+.mega-menu .links li >i {
+    color: var(--main-sec-color);
+}
+.mega-menu .links li > a {
+    padding-bottom: 25px;
+    font-weight: bold;
+    font-size: 17px;
+    color: var(--main-sec-color);
+    
+}
+header .container  .nav-bar  li:last-child a.part:hover + .mega-menu{
+    top: 72px;
+    display: flex;
+}
+
+
+
+
