@@ -5,12 +5,12 @@ box-sizing: border-box;
 }
 :root {
     --main-color: #red;
-    --main-sec-color: #red;
+    --main-sec-color: #5e60ce;
     --main-padding-top: 100px;
     --main-padding-bottom: 100px;
-    --alt-color: #red;
-    --sec-alt-color: #red; 
-    --section-background: #red;
+    --alt-color: #1787e0;
+    --sec-alt-color: #6930c3; 
+    --section-background: #ececec;
     --main-animation: 0.3s;
     --main-padding-bottom: 100px;
     --main-padding-top: 100px;
