@@ -8,7 +8,6 @@ let countDownSec = function () {
 let counterSec = setInterval(countDownSec, 1000);
 
 let myTimeMin = document.querySelector(".min");
-console.log(myTimeMin);
 let countDownMin  = function () {
   myTimeMin.innerHTML -= 1;
   if (myTimeMin.innerHTML === "0") {
