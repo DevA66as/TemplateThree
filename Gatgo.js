@@ -1,5 +1,4 @@
 let myTimeSec = document.querySelector(".sec");
-console.log(myTimeSec);
 let countDownSec = function () {
   myTimeSec.innerHTML -= 1;
   if (myTimeSec.innerHTML === "0") {
@@ -19,7 +18,6 @@ let countDownMin  = function () {
 let counterMin = setInterval(countDownMin, 60000);
 
 let myTimeHours = document.querySelector(".hours");
-console.log(myTimeHours);
 let countDownHours  = function () {
   myTimeHours.innerHTML -= 1;
   if (myTimeHours.innerHTML === "0") {
@@ -28,7 +26,6 @@ let countDownHours  = function () {
 };
 let counterHours = setInterval(countDownHours, 3600000);
 let myTimeDays = document.querySelector(".days");
-console.log(myTimeDays);
 let countDownDays  = function () {
   myTimeDays.innerHTML -= 1;
   if (myTimeDays.innerHTML === "0") {
