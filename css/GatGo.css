@@ -1622,3 +1622,29 @@ color: gray;
     }
 }
 /* end footer  */
+#toTop {
+  display: inline-block;
+  background-color: transparent;
+  width: 30px;
+  height: 34px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  display: none;
+  z-index: 1000;
+  color: var(--sec-alt-color);
+  border-radius: 50%;
+}
+#toTop:hover {
+  cursor: pointer;
+  background-color: var(--main-sec-color);
+}
+#toTop:active {
+  background-color: #555;
+}
+
