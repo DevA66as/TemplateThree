@@ -32,3 +32,18 @@ let countDownDays  = function () {
   }
 };
 let counterDays = setInterval(countDownDays, 86400000);
+let myBtn = document.getElementById("toTop")
+window.onscroll = function () {
+  if (window.scrollY >= 600) {
+    myBtn.style.cssText ="display: block; opacity: 1"
+  } else {
+    myBtn.style.cssText = "display: none; opacity: 0";
+  }
+}
+myBtn.onclick = function () {
+  window.scrollTo({
+    left: 0,
+    top: 0,
+    behavior:"smooth"
+  })
+}
