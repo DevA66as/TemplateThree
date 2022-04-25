@@ -1745,7 +1745,8 @@ ul.fulMenu li:hover::before {
   transition: 0.3s;
 }
 .coolors:hover span {
-  margin-left: 8px;
+  margin-left: 4px;
+  outline: 1px solid #cecece;
 }
 .fulMenu li:first-child, .fulMenu li:nth-child(5),ul.sideBar li:first-child,
 ul.sideBar li:nth-child(5) {
