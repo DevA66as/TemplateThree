@@ -1647,4 +1647,130 @@ color: gray;
 #toTop:active {
   background-color: #555;
 }
+/* ==============================menuButton=================== */
+.menuButton {
+  width: 55px;
+  height: 40px;
+  border: none;
+  background-color: var(--main-sec-color);
+  border-radius: 6px;
+  position: fixed;
+  left: -10px;
+  top: 73px;
+  font-weight: bold;
+  font-size: 12px;
+}
+.menuButton::before{
+    content: " ";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    background-color: #3b030365;
+    transition: left 0.3s;
+    opacity: 0;
+}
+.menuButton:hover::before {
+  opacity: 1;
+  cursor: pointer;
+}
+/* ==============================sideMenu=================== */
 
+.sideMenu {
+  margin: 12px 20px;
+  width: 105px;
+  height: 39rem;
+
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  left: -20px;
+  top: 70px;
+  display: none;
+  z-index: 10;
+}
+ul.sideBar {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--main-sec-color);
+  border-radius: 6px;
+}
+ul.sideBar li,
+ul.fulMenu li {
+  padding: 20px;
+  position: relative;
+}
+ul.sideBar li::before,
+ul.fulMenu li::before{
+  content: " ";
+  position: absolute;
+  left: -100%;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  transition:  left 0.2s;
+  
+}
+ul.sideBar li:hover::before,
+ul.fulMenu li:hover::before {
+    left: 0%;
+    top: 0px;
+    cursor: pointer;
+    background-color: #0000003a;
+}
+.colorShadow {
+  position: relative;
+}
+.colorShadow::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #3b030365;
+  opacity: 0;
+  z-index: 2;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.colorShadow:hover::before {
+  opacity: 1;
+  cursor: progress;
+}
+.coolors {
+  display: flex;
+  gap: 4px;
+  transition: 0.3s;
+}
+.coolors:hover span {
+  margin-left: 8px;
+}
+.fulMenu li:first-child, .fulMenu li:nth-child(5),ul.sideBar li:first-child,
+ul.sideBar li:nth-child(5) {
+  border-bottom: 1px solid #b8b5b5d2;
+}
+.sideBar li i,
+.fulMenu li i {
+  margin-right: 4px;
+}
+.fulMenu span {
+    font-weight: bold;
+    font-size: 12px;
+}
+/* ==================fulmenu================ */
+.fulMenu {
+  margin: 12px 20px;
+  width: 150px;
+  height: 35rem;
+  position: fixed;
+  display: none;
+  left: -20px;
+  top: 70px;
+  display: none;
+  flex-direction: column;
+  background-color: var(--main-sec-color);
+  border-radius: 6px;
+  z-index: 10;
+}
