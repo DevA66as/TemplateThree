@@ -89,6 +89,9 @@ firtColor.forEach((ele) => {
 })
 //=====select root and get new color from local storage
 let root = document.documentElement;
-  root.addEventListener("mousemove", (e) => {
-    root.style.setProperty("--main-sec-color",`${window.localStorage.getItem("color")}`);
+ if (window.localStorage.getItem("color")) {
+  root.addEventListener("click", (e) => {
+    root.style.setProperty("--main-sec-color",`${window.localStorage.getItem("color")}`
+    );
   });
+} 
