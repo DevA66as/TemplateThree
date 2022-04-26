@@ -1671,6 +1671,7 @@ color: gray;
     background-color: #3b030365;
     transition: left 0.3s;
     opacity: 0;
+    z-index: 2;
 }
 .menuButton:hover::before {
   opacity: 1;
