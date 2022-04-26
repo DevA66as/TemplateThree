@@ -89,13 +89,16 @@ firstColor.forEach((ele) => {
 })
 //=====select root and get new color from local storage
 if (window.localStorage.getItem("color") === null) {
-  window.addEventListener("load", () => {
+  window.onload = () => {
     window.localStorage.setItem("color", "#5e60ce");
-    document.styleSheets[4].cssRules[1].style("--main-sec-color",`${window.localStorage.getItem("color")}`);
-  });
+  };
 }
 let root = document.documentElement;
 root.addEventListener("mousemove", (e) => {
+  root.style.setProperty("--main-sec-color",`${window.localStorage.getItem("color")}`
+  );
+});
+root.addEventListener("animationstart", (e) => {
   root.style.setProperty("--main-sec-color",`${window.localStorage.getItem("color")}`
   );
 });
