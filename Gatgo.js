@@ -81,16 +81,22 @@ exitFulMenu.addEventListener("click", () => {
 })
 
 // set  color in local storage
-let firtColor = document.querySelectorAll(".colorShadow");
-firtColor.forEach((ele) => {
+let firstColor = document.querySelectorAll(".colorShadow");
+firstColor.forEach((ele) => {
   ele.addEventListener("click", () => {
     window.localStorage.setItem("color", `${ele.dataset.color}`);
   });
 })
 //=====select root and get new color from local storage
-let root = document.documentElement;
-  root.addEventListener("click", (e) => {
-    root.style.setProperty("--main-sec-color",`${window.localStorage.getItem("color")}`
-    );
+if (window.localStorage.getItem("color") === null) {
+  window.addEventListener("load", () => {
+    window.localStorage.setItem("color", "#5e60ce");
+    document.styleSheets[4].cssRules[1].style("--main-sec-color",`${window.localStorage.getItem("color")}`);
   });
+}
+let root = document.documentElement;
+root.addEventListener("mousemove", (e) => {
+  root.style.setProperty("--main-sec-color",`${window.localStorage.getItem("color")}`
+  );
+});
  
