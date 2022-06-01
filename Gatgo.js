@@ -102,4 +102,10 @@ root.addEventListener("animationstart", (e) => {
   root.style.setProperty("--main-sec-color",`${window.localStorage.getItem("color")}`
   );
 });
- 
+//* colorizer
+let myColorizer = document.getElementById("colorizer");
+console.log(myColorizer.value);
+myColorizer.value = window.localStorage.getItem("color");
+myColorizer.addEventListener("blur", () => {
+  window.localStorage.setItem("color", `${myColorizer.value}`);
+});
